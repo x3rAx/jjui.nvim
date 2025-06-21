@@ -16,6 +16,16 @@ A Neovim plugin that provides a floating window interface for
 
 ## Installation
 
+Using [lazy.nvim](https://github.com/folke/lazy.nvim):
+
+```lua
+{
+    'x3rAx/jjui.nvim',
+    dependencies = ['nvim-lua/plenary.nvim'],
+    opts = {}
+}
+```
+
 Using [packer.nvim](https://github.com/wbthomason/packer.nvim):
 
 ```lua
@@ -25,16 +35,6 @@ use {
     config = function()
         require('jjui').setup()
     end
-}
-```
-
-Using [lazy.nvim](https://github.com/folke/lazy.nvim):
-
-```lua
-{
-    'x3rAx/jjui.nvim',
-    dependencies = 'nvim-lua/plenary.nvim',
-    opts = {}
 }
 ```
 

@@ -27,18 +27,6 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 }
 ```
 
-Using [packer.nvim](https://github.com/wbthomason/packer.nvim):
-
-```lua
-use {
-    "x3rAx/jjui.nvim",
-    requires = "folke/snacks.nvim",
-    config = function()
-        require("jjui").setup()
-    end
-}
-```
-
 ## Configuration
 
 The plugin can be configured by passing options to the setup function:

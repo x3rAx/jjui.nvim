@@ -11,7 +11,7 @@ A Neovim plugin that provides a floating window interface for
 ## Requirements
 
 - Neovim >= 0.5.0
-- [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
+- [snacks.nvim](https://github.com/folke/snacks.nvim)
 - [jjui](https://github.com/idursun/jjui) installed and available in your PATH
 
 ## Installation
@@ -20,9 +20,10 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
-    'x3rAx/jjui.nvim',
-    dependencies = ['nvim-lua/plenary.nvim'],
-    opts = {}
+    "x3rAx/jjui.nvim",
+    dependencies = { "folke/snacks.nvim" },
+    event = "VeryLazy",
+    opts = {},
 }
 ```
 
@@ -30,10 +31,10 @@ Using [packer.nvim](https://github.com/wbthomason/packer.nvim):
 
 ```lua
 use {
-    'x3rAx/jjui.nvim',
-    requires = 'nvim-lua/plenary.nvim',
+    "x3rAx/jjui.nvim",
+    requires = "folke/snacks.nvim",
     config = function()
-        require('jjui').setup()
+        require("jjui").setup()
     end
 }
 ```
@@ -43,8 +44,8 @@ use {
 The plugin can be configured by passing options to the setup function:
 
 ```lua
-require('jjui').setup({
-    mapping = '<leader>jj'  -- Change the default keymap
+require("jjui").setup({
+    mapping = "<leader>jj"  -- Change the default keymap
 })
 ```
 
@@ -52,10 +53,10 @@ Or when using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
-    'x3rAx/jjui.nvim',
-    dependencies = 'nvim-lua/plenary.nvim',
+    "x3rAx/jjui.nvim",
+    dependencies = { "folke/snacks.nvim" },
     opts = {
-      mapping = '<leader>jj'
+      mapping = "<leader>jj"
     }
 }
 ```
